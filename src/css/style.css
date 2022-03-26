@@ -26,7 +26,7 @@ header img{
 main{
   margin-top: 150px;
 }
-main h2{
+h2{
   font-size:24px;
   text-align: center;
 }
@@ -62,5 +62,34 @@ footer{
   padding: 30px;
   background-color: rgba(245,245,245,0.3);
   color: #f5deb3;
+}
+.article h2{
+  margin-bottom: 80px;
+}
+.article p{
+  line-height: 2em;
+}
+.color-red{
+  color: red;
+}
+.weight{
+  font-weight: bold;
+}
+.color-blue{
+  color: blue;
+}
+.back-yellow{
+background-color: yellow;
+}
+.btn-wrap{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.btn{
+  display: inline-block;
+  background-color: #f5deb3;
+  padding: 20px 50px;
+  border-radius: 5px;
 }
 /* @media(max-width:767px){ ... } */
