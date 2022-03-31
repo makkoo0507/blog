@@ -63,6 +63,9 @@ footer{
   background-color: rgba(245,245,245,0.3);
   color: #f5deb3;
 }
+.index-wrapper{
+  margin-top: 150px;
+}
 .article h2{
   margin-bottom: 80px;
 }
