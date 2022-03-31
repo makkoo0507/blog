@@ -36,6 +36,11 @@ h2{
   border: 1px solid #f5f5f5;
   box-shadow: 1px 1px 5px 1px #f5f5f5;
 }
+.btn-wrapper_top{
+  text-align: center;
+  margin-top: 60px;
+}
+
 .article-list{
   margin-top: 50px;
 }
