@@ -31,5 +31,5 @@
             </div>
         </div>
         <div class="btn-wrap">
-            <a class="btn" href="#">記事一覧へ戻る</a>
+            <a class="btn" href="./index.php">記事一覧へ戻る</a>
         </div>
