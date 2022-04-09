@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <h1><a href="#"><img src="./img/makoBlog_Logo.png"></a></h1>
+    <h1><a href="./top.php"><img src="./img/makoBlog_Logo.png"></a></h1>
 </header>
 <?php include $content ?>
 <footer>
