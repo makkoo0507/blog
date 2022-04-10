@@ -1,7 +1,9 @@
     <div class="article" style="margin-top: 150px;">
         <div class="main-container">
-            <h2 class="title">ブログサイトを作成途中で思っていることをつらつらと書いていく</h2>
-            <div>
+            <h2 class="title"><?php echo $articleTitle?></h2>
+            <p class= "create_at">Date:<?php echo substr($create_at,0,10);?></p>
+            <?php echo $articleText ?>
+            <!-- <div>
                 <p>今、ブログサイトを作成中です。</p><br>
                 <p>仮の記事として何か書こうと思い、今思っていることをつらつら書いていこうと思いました。
                     今までの学習をまとめるとかそういったう崇高なものではございません。字数を埋めるためだけにつらつら書いているだけです。</p>
@@ -28,7 +30,7 @@
                     このときタイトルなどの未記入部分があれば、エラーが出る使用にする。
                 </p>
                 <p><span class="weight back-yellow">とりあえず頑張ります</span></p>
-            </div>
+            </div> -->
         </div>
         <div class="btn-wrap">
             <a class="btn" href="./index.php">記事一覧へ戻る</a>

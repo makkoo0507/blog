@@ -1,4 +1,4 @@
-/* ここから書いていく*/
+/* ここから書いていく */
 body{
 font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
 }
@@ -50,6 +50,10 @@ h2{
   margin: 0 auto;
   margin-bottom: 15px;
 }
+.create_at{
+  margin-bottom: 25px;
+}
+
 .contact-wrap{
   width: 100%;
   text-align: center;
