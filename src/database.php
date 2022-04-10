@@ -1,14 +1,17 @@
 <?php
-// .envを使うためのライブラリをインストール
-// .envファイル用のライブラリをインストール、一括でライブラリの読み込み
+
+// ライブラリの一括読み込み。dotenvを使用するため。
 require_once __DIR__ .'/vendor/autoload.php';
+// .envファイルの読み込み .envにはデータベース接続情報が記載
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-// .envファイルの読み込み
+// データベースに接続。接続情報は.envから取得
 $link = mysqli_connect($_ENV['DB_HOST'],$_ENV['DB_USER'],$_ENV['DB_PASS'],$_ENV['DB_NAME']);
+// 接続できたかのチェック
 if(!$link){
     echo '接続できませんでした';
 }
+// 表の削除、作成、挿入のSQL文作成
 $drop = <<<EOD
 DROP TABLE IF EXISTS articles;
 EOD;
@@ -21,8 +24,6 @@ CREATE TABLE articles(
     create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 )DEFAULT CHARACTER SET=utf8mb4;
 EOD;
-// $result=mysqli_query($link,$drop);
-// $result=mysqli_query($link,$create);
 
 $insert = <<<EOD
 INSERT INTO articles(id,title,text,create_at)VALUE
@@ -30,20 +31,24 @@ INSERT INTO articles(id,title,text,create_at)VALUE
 ("タイトル2","明日もいい天気だといいな","2022-03-01")
 ;
 EOD;
-// $result=mysqli_query($link,$insert);
+
 $select = <<<EOD
 SELECT *
 FROM articles
 ;
 EOD;
-$result = mysqli_query($link,$select);
+// SQLの実行
+// $result=mysqli_query($link,$drop);
+// $result=mysqli_query($link,$create);
+// $result=mysqli_query($link,$insert);
+// $result = mysqli_query($link,$select);
 
+// 命令の実行が成功したかのチェック
 if(!$result){
     echo "命令が実行できませんでした";
 }else{
     echo "命令が実行されました".PHP_EOL;
 }
-
 while($row = mysqli_fetch_assoc($result)){
     echo "タイトル".$row['title'].PHP_EOL;
     echo "作成日時".$row['create_at'].PHP_EOL;

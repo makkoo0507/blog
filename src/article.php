@@ -1,12 +1,8 @@
 <?php
+// articleテーブルの取得
 require_once __DIR__."/getArticles.php";
-if(!$result){
-    echo "命令が実行できませんでした".PHP_EOL;
-}
+// urlパラメータから提示する記事がどれか取得
 $articleNum = $_GET['articleNum'];
-$articleTitle="";
-$articleText="";
-$create_at="";
 for($i=0;$i<=$articleNum;$i++){
     $article = $articles[$articleNum];
     $articleTitle = $article["title"];

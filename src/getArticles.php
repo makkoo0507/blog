@@ -8,7 +8,7 @@ SELECT *
 FROM articles
 EOD;
 $result = mysqli_query($link, $sql);
-// $articles =[];
+$articles =[];
 while($article=mysqli_fetch_assoc($result)){
     $articles[]=$article;
 }
