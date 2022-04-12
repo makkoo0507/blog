@@ -42,11 +42,13 @@ h2{
 }
 
 .article-list{
+  margin: auto;
   margin-top: 50px;
+  width:fit-content;
 }
 
 .article-item{
-  max-width: 400px;
+  max-width: 800px;
   margin: 0 auto;
   margin-bottom: 15px;
 }
