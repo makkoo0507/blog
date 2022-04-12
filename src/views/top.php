@@ -3,6 +3,7 @@
     <div class="main-container">
         <h2 class="title">最新記事5</h2>
         <ul class="article-list">
+        <!-- show_article_listはgetArticles.phpの中 -->
         <?php show_article_list($articles, $displayQuantity)?>
         </ul>
         <div class="btn-wrapper_top">

@@ -1,4 +1,8 @@
 <?php
+// ダイレクトアクセスに対する処理
+if($_SERVER['HTTP_REFERER']="/database.php"){
+    header('Location:/top.php');
+}
 
 // ライブラリの一括読み込み。dotenvを使用するため。
 require_once __DIR__ .'/vendor/autoload.php';
@@ -27,8 +31,8 @@ EOD;
 
 $insert = <<<EOD
 INSERT INTO articles(id,title,text,create_at)VALUE
-("タイトル","今日はいい天気でした","2022-02-02"),
-("タイトル2","明日もいい天気だといいな","2022-03-01")
+(1,"タイトル","今日はいい天気でした","2022-02-02"),
+(2,"タイトル2","明日もいい天気だといいな","2022-03-01")
 ;
 EOD;
 
@@ -38,9 +42,9 @@ FROM articles
 ;
 EOD;
 // SQLの実行
-// $result=mysqli_query($link,$drop);
-// $result=mysqli_query($link,$create);
-// $result=mysqli_query($link,$insert);
+// $result = mysqli_query($link,$drop);
+// $result = mysqli_query($link,$create);
+// $result = mysqli_query($link,$insert);
 // $result = mysqli_query($link,$select);
 
 // 命令の実行が成功したかのチェック

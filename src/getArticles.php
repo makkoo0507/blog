@@ -1,4 +1,8 @@
 <?php
+// ダイレクトアクセスに対する処理
+if($_SERVER['HTTP_REFERER']="/database.php"){
+    header('Location:/getArticles.php');
+}
 require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
